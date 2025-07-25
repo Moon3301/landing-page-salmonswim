@@ -1,0 +1,35 @@
+<section id="inicio" class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-text">
+          <h1 class="hero-title" [class.animate]="animate">
+            Aprende a Nadar con los
+            <span class="highlight">Mejores Instructores</span>
+          </h1>
+          <p class="hero-subtitle" [class.animate]="animate">
+            Clases personalizadas de natación para todas las edades y niveles. 
+            Mejora tu técnica, condición física y confianza en el agua.
+          </p>
+          <div class="hero-actions" [class.animate]="animate">
+            <a href="#contacto" class="btn-primary" (click)="scrollToSection($event, 'contacto')">Reservar Primera Clase</a>
+            <a href="#servicios" class="btn-secondary" (click)="scrollToSection($event, 'servicios')">Ver Servicios</a>
+          </div>
+          <div class="hero-stats" [class.animate]="animate">
+            <div class="stat">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">Estudiantes</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Años Experiencia</span>
+            </div>
+            <div class="stat" [class.animate]="animate">
+              <span class="stat-number">95%</span>
+              <span class="stat-label">Satisfacción</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

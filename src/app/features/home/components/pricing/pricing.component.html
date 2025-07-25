@@ -1,0 +1,60 @@
+<section id="precios" class="pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Planes y Precios</h2>
+            <p class="section-subtitle">
+            Elige el plan que mejor se adapte a tus objetivos y presupuesto
+            </p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card" 
+                *ngFor="let plan of pricingPlans" 
+                [class.popular]="plan.isPopular">
+
+                <div class="popular-badge" *ngIf="plan.isPopular">
+                    ⭐ Más Popular
+                </div>
+                
+                <div class="pricing-header">
+                    <h3 class="plan-name">{{ plan.name }}</h3>
+                    <div class="plan-price">
+                    <span class="currency">$</span>
+                    <span class="amount">{{ plan.price | number:'1.0-0' }}</span>
+                    <span class="period">/{{ plan.duration }}</span>
+                    </div>
+                    <p class="plan-sessions">{{ plan.sessionsPerWeek }} {{ plan.sessionsPerWeek === 1 ? 'clase' : 'clases' }} por semana</p>
+                </div>
+                
+                <div class="pricing-features">
+                    <div class="feature" *ngFor="let feature of plan.features">
+                    <span class="feature-icon">✅</span>
+                    <span class="feature-text">{{ feature }}</span>
+                    </div>
+                </div>
+                
+                <button class="pricing-btn" [class.popular-btn]="plan.isPopular">
+                    Seleccionar Plan
+                </button>
+            </div>
+        </div>
+        
+        <div class="payment-methods">
+            <h3 class="payment-title">Métodos de Pago Disponibles</h3>
+            <div class="payment-grid">
+                <div class="payment-method" *ngFor="let method of paymentMethods">
+                    <div class="payment-icon">{{ method.icon }}</div>
+                    <div class="payment-info">
+                        <h4 class="payment-name">{{ method.name }}</h4>
+                        <p class="payment-description">{{ method.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="payment-note">
+            <p>💳 Pagos 100% seguros con encriptación SSL. Puedes cancelar tu suscripción en cualquier momento.</p>
+        </div>
+
+    </div>
+</section>

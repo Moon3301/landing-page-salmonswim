@@ -1,0 +1,45 @@
+<section id="horarios" class="schedule">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Horarios Disponibles</h2>
+        <p class="section-subtitle">
+          Encuentra el horario perfecto que se adapte a tu rutina diaria
+        </p>
+      </div>
+      
+      <div class="schedule-table-container">
+        <div class="schedule-table">
+          <div class="schedule-header">
+            <div class="header-cell">Servicio</div>
+            <div class="header-cell">Día</div>
+            <div class="header-cell">Horario</div>
+            <div class="header-cell">Instructor</div>
+            <div class="header-cell">Disponibilidad</div>
+            <div class="header-cell">Acción</div>
+          </div>
+          
+          <div class="schedule-row" *ngFor="let schedule of schedules">
+            <div class="schedule-cell service-name">{{ schedule.service }}</div>
+            <div class="schedule-cell">{{ schedule.dayOfWeek }}</div>
+            <div class="schedule-cell time">{{ schedule.time }}</div>
+            <div class="schedule-cell">{{ schedule.instructor }}</div>
+            <div class="schedule-cell availability">
+              <div class="availability-indicator" [class]="getAvailabilityClass(schedule)">
+                <span class="spots">{{ schedule.availableSpots }}/{{ schedule.totalSpots }}</span>
+                <span class="status">{{ getAvailabilityText(schedule) }}</span>
+              </div>
+            </div>
+            <div class="schedule-cell">
+              <button class="reserve-btn" [disabled]="schedule.availableSpots === 0">
+                {{ schedule.availableSpots === 0 ? 'Agotado' : 'Reservar' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="schedule-note">
+        <p><strong>Nota:</strong> Los horarios pueden variar durante días festivos. Contacta con nosotros para confirmar disponibilidad.</p>
+      </div>
+    </div>
+  </section>

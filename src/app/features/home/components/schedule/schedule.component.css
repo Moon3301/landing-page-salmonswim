@@ -1,0 +1,220 @@
+.schedule {
+    padding: 6rem 0;
+    background: white;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #0891b2, #0e7490);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .schedule-table-container {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule-table {
+    width: 100%;
+    min-width: 800px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .schedule-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1.5fr 1fr;
+    background: linear-gradient(135deg, #0891b2, #0e7490);
+    color: white;
+  }
+  
+  .header-cell {
+    padding: 1.5rem 1rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .schedule-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1.5fr 1fr;
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.2s ease;
+  }
+  
+  .schedule-row:hover {
+    background: #f8fafc;
+  }
+  
+  .schedule-row:last-child {
+    border-bottom: none;
+  }
+  
+  .schedule-cell {
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+  
+  .service-name {
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .time {
+    font-family: monospace;
+    color: #0891b2;
+    font-weight: 600;
+  }
+  
+  .availability {
+    justify-content: center;
+  }
+  
+  .availability-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .spots {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  .status {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  
+  .availability-indicator.high .spots {
+    color: #059669;
+  }
+  
+  .availability-indicator.high .status {
+    background: #dcfce7;
+    color: #059669;
+  }
+  
+  .availability-indicator.medium .spots {
+    color: #d97706;
+  }
+  
+  .availability-indicator.medium .status {
+    background: #fef3c7;
+    color: #d97706;
+  }
+  
+  .availability-indicator.low .spots {
+    color: #dc2626;
+  }
+  
+  .availability-indicator.low .status {
+    background: #fecaca;
+    color: #dc2626;
+  }
+  
+  .availability-indicator.none .spots {
+    color: #6b7280;
+  }
+  
+  .availability-indicator.none .status {
+    background: #f3f4f6;
+    color: #6b7280;
+  }
+  
+  .reserve-btn {
+    background: linear-gradient(135deg, #059669, #047857);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+  }
+  
+  .reserve-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #047857, #065f46);
+    transform: translateY(-2px);
+  }
+  
+  .reserve-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  .schedule-note {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    color: #0c4a6e;
+  }
+  
+  @media (max-width: 768px) {
+    .schedule {
+      padding: 4rem 0;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+    }
+    
+    .schedule-table-container {
+      margin: 0 -1rem 2rem -1rem;
+      border-radius: 0;
+    }
+    
+    .schedule-table {
+      border-radius: 0;
+    }
+    
+    .header-cell,
+    .schedule-cell {
+      padding: 1rem 0.5rem;
+      font-size: 0.85rem;
+    }
+    
+    .reserve-btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+  }
