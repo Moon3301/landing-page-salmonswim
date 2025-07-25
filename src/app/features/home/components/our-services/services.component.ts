@@ -3,7 +3,7 @@ import { SwimmingServiceModel } from '../../../../core/models/swimming.models';
 import { SwimmingService } from '../../../../core/services/swimming.service';
 
 @Component({
-  selector: 'app-services',
+  selector: 'home-services',
   standalone: false,
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.css']

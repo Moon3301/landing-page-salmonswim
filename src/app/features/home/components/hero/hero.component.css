@@ -13,8 +13,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(8, 145, 178, 0.9), rgba(14, 116, 144, 0.8)),
-                url('https://images.pexels.com/photos/863975/pexels-photo-863975.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover;
+    background: linear-gradient(135deg, rgba(8, 145, 178, 0.9), rgba(14, 116, 144, 0.6)),
+                url('https://media.istockphoto.com/id/465383082/es/foto/hembra-nadador-en-la-piscina.jpg?s=612x612&w=0&k=20&c=qDBjlQNK7H-rx7L1tbzzLLQbOUJKGzFSiJJ-vt2RMMc=') center/cover;
     z-index: -1;
   }
   

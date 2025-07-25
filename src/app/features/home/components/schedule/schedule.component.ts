@@ -3,10 +3,10 @@ import { Schedule } from '../../../../core/models/swimming.models';
 import { SwimmingService } from '../../../../core/services/swimming.service';
 
 @Component({
-  selector: 'app-schedule',
+  selector: 'home-schedule',
   standalone: false,
   templateUrl: './schedule.component.html',
-  styleUrl: './schedule.component.css'
+  styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
   schedules: Schedule[] = [];
@@ -21,7 +21,7 @@ export class ScheduleComponent implements OnInit {
 
   getAvailabilityClass(schedule: Schedule): string {
     const percentage = schedule.availableSpots / schedule.totalSpots;
-    
+
     if (schedule.availableSpots === 0) return 'none';
     if (percentage <= 0.25) return 'low';
     if (percentage <= 0.5) return 'medium';

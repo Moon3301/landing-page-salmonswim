@@ -1,7 +1,8 @@
 <header class="header" [class.scrolled]="isScrolled">
     <div class="container">
+    
       <div class="nav-brand">
-        <h2>🏊‍♀️ SalmonSwim</h2>
+        <h2> <img src="public/img/2.png" width="50" height="50" alt="Hero">SalmonSwim</h2>
       </div>
       
       <nav class="nav-menu" [class.active]="isMenuOpen">
@@ -14,7 +15,7 @@
       </nav>    
       
       <div class="nav-actions">
-        <a href="#contacto" class="btn-primary">Reservar Clase</a>
+        <a href="#contacto" (click)="scrollToSection($event, 'horarios')" class="btn-primary">Reservar Clase</a>
         <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
           <span></span>
           <span></span>

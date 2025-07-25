@@ -1,10 +1,10 @@
 import { Component, AfterViewInit } from '@angular/core';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'home-hero',
   standalone: false,
   templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements AfterViewInit {
 
@@ -22,12 +22,12 @@ export class HeroComponent implements AfterViewInit {
     if (element) {
       const headerHeight = 70; // Altura del header
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-      
+
       window.scrollTo({
         top: elementPosition - headerHeight,
         behavior: 'smooth'
       });
     }
-  } 
+  }
 
 }

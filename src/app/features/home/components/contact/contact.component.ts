@@ -5,10 +5,10 @@ import { SwimmingService } from '../../../../core/services/swimming.service';
 import { ContactService } from '../../../../core/services/contact.service';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'home-contact',
   standalone: false,
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;

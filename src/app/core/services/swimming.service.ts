@@ -33,7 +33,7 @@ export class SwimmingService {
       duration: '30 min',
       level: 'Beginner',
       maxStudents: 4,
-      image: 'https://images.pexels.com/photos/1263348/pexels-photo-1263348.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'public/img/4.jpeg'
     },
     {
       id: '4',
@@ -42,7 +42,7 @@ export class SwimmingService {
       duration: '45 min',
       level: 'All Levels',
       maxStudents: 8,
-      image: 'https://images.pexels.com/photos/1263347/pexels-photo-1263347.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'public/img/5.jpg'
     },
     {
       id: '5',
@@ -51,7 +51,7 @@ export class SwimmingService {
       duration: '60 min',
       level: 'Intermediate',
       maxStudents: 4,
-      image: 'https://images.pexels.com/photos/1263346/pexels-photo-1263346.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'public/img/3.jpg'
     },
     {
       id: '6',
@@ -60,17 +60,16 @@ export class SwimmingService {
       duration: '90 min',
       level: 'Advanced',
       maxStudents: 6,
-      image: 'https://images.pexels.com/photos/1263345/pexels-photo-1263345.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'public/img/6.png'
     }
   ];
 
   private schedules: Schedule[] = [
-    { id: '1', service: 'Clases Individuales', dayOfWeek: 'Lunes', time: '08:00 - 08:45', instructor: 'Carlos Mendoza', availableSpots: 1, totalSpots: 1 },
-    { id: '2', service: 'Clases Grupales', dayOfWeek: 'Lunes', time: '09:00 - 10:00', instructor: 'María López', availableSpots: 3, totalSpots: 6 },
-    { id: '3', service: 'Natación Infantil', dayOfWeek: 'Martes', time: '16:00 - 16:30', instructor: 'Ana García', availableSpots: 2, totalSpots: 4 },
-    { id: '4', service: 'Aqua Fitness', dayOfWeek: 'Miércoles', time: '18:00 - 18:45', instructor: 'Roberto Silva', availableSpots: 5, totalSpots: 8 },
-    { id: '5', service: 'Perfeccionamiento Técnico', dayOfWeek: 'Jueves', time: '19:00 - 20:00', instructor: 'Carlos Mendoza', availableSpots: 1, totalSpots: 4 },
-    { id: '6', service: 'Preparación Competitiva', dayOfWeek: 'Viernes', time: '20:00 - 21:30', instructor: 'María López', availableSpots: 2, totalSpots: 6 }
+    { id: '1', service: 'Clases Individuales', dayOfWeek: 'Lunes', time: '18:15 - 20:00', instructor: 'Carlos Mendoza', availableSpots: 1, totalSpots: 1 },
+    { id: '2', service: 'Clases Grupales', dayOfWeek: 'Lunes', time: '20:00 - 22:00', instructor: 'María López', availableSpots: 3, totalSpots: 6 },
+    { id: '3', service: 'Natación Infantil', dayOfWeek: 'Miércoles', time: '18:15 - 20:00', instructor: 'Ana García', availableSpots: 2, totalSpots: 4 },
+    { id: '4', service: 'Clases Grupales', dayOfWeek: 'Miércoles', time: '20:00 - 22:00', instructor: 'Roberto Silva', availableSpots: 5, totalSpots: 8 },
+    { id: '5', service: 'Natación Infantil', dayOfWeek: 'Viernes', time: '17:00 - 19:00', instructor: 'María López', availableSpots: 2, totalSpots: 6 }
   ];
 
   private pricingPlans: PricingPlan[] = [
@@ -90,7 +89,7 @@ export class SwimmingService {
     {
       id: '2',
       name: 'Plan Estándar',
-      price: 75000,
+      price: 80000,
       duration: 'mensual',
       sessionsPerWeek: 2,
       isPopular: true,
@@ -123,13 +122,13 @@ export class SwimmingService {
   ];
 
   private contactInfo: ContactInfo = {
-    phone: '+56 9 8765 4321',
-    email: 'info@salmonswim.cl',
-    whatsapp: '+56 9 8765 4321',
-    address: 'Av. Las Condes 1234, Las Condes, Santiago',
+    phone: '+56 9 82530378',
+    email: 'carla@salmonswim.cl',
+    whatsapp: '+56 9 82530378',
+    address: 'María Monvel 50, La reina',
     socialMedia: {
-      instagram: '@salmonswim',
-      facebook: 'SalmonSwim'
+      instagram: '@club.salmon.swim',
+      facebook: 'club.salmon.swim'
     }
   };
 

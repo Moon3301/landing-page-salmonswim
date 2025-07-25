@@ -50,7 +50,7 @@
   
   .schedule-header {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
     background: linear-gradient(135deg, #0891b2, #0e7490);
     color: white;
   }
@@ -65,7 +65,7 @@
   
   .schedule-row {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
     border-bottom: 1px solid #e2e8f0;
     transition: background-color 0.2s ease;
   }
@@ -94,6 +94,17 @@
     font-family: monospace;
     color: #0891b2;
     font-weight: 600;
+  }
+
+  .dayOfWeek {
+    font-weight: 600;
+    color: #0890b2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .instructor {
+    font-weight: 600;
+    color: #1e293b;
   }
   
   .availability {

@@ -3,10 +3,10 @@ import { ContactInfo } from '../../../../core/models/swimming.models';
 import { SwimmingService } from '../../../../core/services/swimming.service';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'layout-footer',
   standalone: false,
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
   contactInfo: ContactInfo | null = null;

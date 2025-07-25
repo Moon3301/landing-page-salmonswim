@@ -3,10 +3,10 @@ import { PricingPlan, PaymentMethod } from '../../../../core/models/swimming.mod
 import { SwimmingService } from '../../../../core/services/swimming.service';
 
 @Component({
-  selector: 'app-pricing',
+  selector: 'home-pricing',
   standalone: false,
   templateUrl: './pricing.component.html',
-  styleUrl: './pricing.component.css'
+  styleUrls: ['./pricing.component.css']
 })
 export class PricingComponent implements OnInit {
   pricingPlans: PricingPlan[] = [];

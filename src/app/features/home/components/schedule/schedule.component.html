@@ -13,27 +13,29 @@
             <div class="header-cell">Servicio</div>
             <div class="header-cell">Día</div>
             <div class="header-cell">Horario</div>
-            <div class="header-cell">Instructor</div>
-            <div class="header-cell">Disponibilidad</div>
-            <div class="header-cell">Acción</div>
+             <div class="header-cell">Instructor</div>
+            <!--<div class="header-cell">Disponibilidad</div> -->
+            <!-- <div class="header-cell">Acción</div>  -->
           </div>
           
           <div class="schedule-row" *ngFor="let schedule of schedules">
             <div class="schedule-cell service-name">{{ schedule.service }}</div>
-            <div class="schedule-cell">{{ schedule.dayOfWeek }}</div>
+            <div class="schedule-cell dayOfWeek">{{ schedule.dayOfWeek }}</div>
             <div class="schedule-cell time">{{ schedule.time }}</div>
-            <div class="schedule-cell">{{ schedule.instructor }}</div>
-            <div class="schedule-cell availability">
+             <div class="schedule-cell instructor">{{ schedule.instructor }}</div>
+            <!--<div class="schedule-cell availability">
               <div class="availability-indicator" [class]="getAvailabilityClass(schedule)">
                 <span class="spots">{{ schedule.availableSpots }}/{{ schedule.totalSpots }}</span>
                 <span class="status">{{ getAvailabilityText(schedule) }}</span>
               </div>
             </div>
-            <div class="schedule-cell">
+            -->
+            <!-- <div class="schedule-cell">
               <button class="reserve-btn" [disabled]="schedule.availableSpots === 0">
                 {{ schedule.availableSpots === 0 ? 'Agotado' : 'Reservar' }}
               </button>
-            </div>
+            </div>  -->
+            
           </div>
         </div>
       </div>
