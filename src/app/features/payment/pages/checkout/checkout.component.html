@@ -1,0 +1,70 @@
+<shared-header></shared-header>
+<main class="checkout-page">
+  <div class="container">
+    <div class="checkout-grid">
+      <!-- Left Column - Payment Form -->
+      <div class="checkout-form">
+        <h1 class="page-title">Finalizar compra</h1>
+
+        <!-- Contact Information -->
+        <payment-contact-info-form></payment-contact-info-form>
+
+        <section class="checkout-section">
+
+          <shared-payment-methods></shared-payment-methods>
+
+          <credit-card-form></credit-card-form>
+
+        </section>
+
+        <button type="submit" class="btn btn-primary btn-block">Pagar ahora</button>
+
+        <p class="secure-payment">
+          <i class="fas fa-lock"></i> Pago seguro con encriptación SSL
+        </p>
+      </div>
+
+      <!-- Right Column - Order Summary -->
+      <div class="order-summary">
+        <h2>Resumen del pedido</h2>
+        <div class="order-items">
+          <div class="order-item" *ngFor="let item of cartItems">
+            <div class="item-details">
+              <h4>{{item.plan.name}}</h4>
+              <p>{{item.plan.description}}</p>
+              <div class="item-quantity">
+                <button (click)="decreaseQuantity(item.plan.id)">-</button>
+                <span>{{item.quantity}}</span>
+                <button (click)="increaseQuantity(item.plan.id)">+</button>
+              </div>
+            </div>
+            <div class="item-price">
+              {{item.plan.price * item.quantity | currency:'USD'}}
+            </div>
+          </div>
+        </div>
+
+        <div class="order-totals">
+          <div class="subtotal">
+            <span>Subtotal</span>
+            <span>{{subtotal | currency:'USD'}}</span>
+          </div>
+          <div class="taxes">
+            <span>IVA (21%)</span>
+            <span>{{taxes | currency:'USD'}}</span>
+          </div>
+          <div class="total">
+            <span>Total</span>
+            <span>{{total | currency:'USD'}}</span>
+          </div>
+        </div>
+
+        <div class="secure-badge">
+          <i class="fas fa-shield-alt"></i>
+          <span>Pago 100% seguro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<shared-footer></shared-footer>

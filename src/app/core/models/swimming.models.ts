@@ -1,11 +1,13 @@
 export interface SwimmingServiceModel {
   id: string;
   name: string;
-  description: string;
+  description?: string;
+  fullDescription?: string;
   duration: string;
   level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All Levels';
   maxStudents: number;
   image: string;
+  isDisabled?: boolean;
 }
 
 export interface Schedule {
@@ -26,6 +28,9 @@ export interface PricingPlan {
   features: string[];
   isPopular?: boolean;
   sessionsPerWeek: number;
+  isDisabledBtn?: boolean;
+  description?: string;
+  fullDescription?: string;
 }
 
 export interface ContactInfo {

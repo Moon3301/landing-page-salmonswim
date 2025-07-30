@@ -1,0 +1,25 @@
+<shared-header></shared-header>
+<main>
+
+  <section id="product" class="product">
+    <div class="container">
+
+      <div class="product-grid">
+        <shared-card-service [service]="service"></shared-card-service>
+
+        <div class="product-content">
+          <h3 class="product-title">{{ service.name }}</h3>
+          <p class="product-description">{{ service.description }}</p>
+          <p class="product-duration">Duración: {{ service.duration }}</p>
+          <p class="product-maxStudents">Máx. {{ service.maxStudents }} {{ service.maxStudents === 1 ? 'estudiante' : 'estudiantes' }}</p>
+          <p class="product-level">Nivel: {{ service.level }}</p>
+
+          <button class="product-btn">Ver planes disponibles</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+<shared-footer></shared-footer>

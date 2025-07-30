@@ -1,0 +1,98 @@
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Importante */
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  /* --- NUEVO: altura mínima para unificar tarjetas --- */
+
+}
+
+.service-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+.service-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.service-level {
+  background: rgba(8, 145, 178, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+  }
+
+.service-content {
+  padding: 2rem;
+}
+
+.service-title {
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+  min-height: 70px;
+}
+
+.service-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  min-height: 90px;
+
+}
+
+.service-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.service-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.service-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-btn:hover {
+    background: linear-gradient(135deg, #0e7490, #155e75);
+    transform: translateY(-2px);
+}
+
+.detail-icon {
+  font-size: 1rem;
+}

@@ -16,6 +16,9 @@ export class ServicesComponent implements OnInit {
   ngOnInit() {
     this.swimmingService.getServices().subscribe(services => {
       this.services = services;
+      this.services.forEach((service) => {
+        service.isDisabled = false;
+      });
     });
   }
 }

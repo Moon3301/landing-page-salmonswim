@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'payment',
+    loadChildren: () => import('./features/payment/payment.module').then(m => m.PaymentModule)
+  },
+  {
     path: '**',
     redirectTo: ''
   }

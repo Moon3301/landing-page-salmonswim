@@ -1,0 +1,37 @@
+<aside class="sidebar" [class.open]="isOpen">
+  <header class="sidebar-header">
+    <h3>Mi carrito</h3>
+    <button class="close-btn" (click)="close()">&times;</button>
+  </header>
+
+  <div class="sidebar-body" *ngIf="cart$ | async as cart">
+    <p class="empty" *ngIf="cart.length === 0">Tu carrito está vacío</p>
+
+    <div *ngFor="let item of cart" class="product-item">
+      
+      <div class="product-info">
+        <h4>{{ item.plan.name }}</h4>
+        <p>{{ item.plan.description }}</p>
+        <div>Precio: <span class="price">${{ item.plan.price | number:'1.0-0' }}</span></div>
+
+        <div class="quantity-control">
+          <button class="quantity-btn" (click)="decreaseQuantity(item.plan.id)">-</button>
+          <span class="quantity">{{ item.quantity }}</span>
+          <button class="quantity-btn" (click)="increaseQuantity(item.plan.id)">+</button>
+        </div>
+        
+      </div>
+      <button class="btn-primary" (click)="removePlan(item.plan.id)">Eliminar</button>
+    </div>
+
+    @if(cart.length > 0){
+      <hr style="width: 100%;">
+      <p class="total">Total a pagar: ${{ getTotal() | number:'1.0-0' }}</p>
+    }
+    
+  </div>
+
+  <footer class="sidebar-footer">
+    <button class="btn-checkout" [disabled]="getTotal() === 0" (click)="goToCheckout()">Pagar</button>
+  </footer>
+</aside>

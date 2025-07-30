@@ -1,0 +1,32 @@
+<header class="header" [class.scrolled]="isScrolled">
+    <div class="container">
+
+      <div #a class="nav-brand" href="#inicio" (click)="scrollToSection($event, 'inicio')">
+        <h2> <img src="public/img/2.png" width="50" height="50" alt="Hero" >SalmonSwim</h2>
+      </div>
+
+      <nav class="nav-menu" [class.active]="isMenuOpen">
+        <a href="#inicio" (click)="scrollToSection($event, 'inicio')">Inicio</a>
+        <a href="#servicios" (click)="scrollToSection($event, 'servicios')">Servicios</a>
+        <a href="#horarios" (click)="scrollToSection($event, 'horarios')">Horarios</a>
+        <a href="#precios" (click)="scrollToSection($event, 'precios')">Precios</a>
+        <a href="#acerca" (click)="scrollToSection($event, 'acerca')">Acerca de</a>
+        <a href="#contacto" (click)="scrollToSection($event, 'contacto')">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn-primary" (click)="toggleSidebar()">
+          <img src="public/img/carro-de-compras.png" class="carrito" width="30" height="30" alt="Carrito">
+          <span class="badge">{{ quantity$ | async }}</span>
+        </a>
+
+        <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+<app-sidebar-shopping-cart></app-sidebar-shopping-cart>

@@ -1,0 +1,80 @@
+.plan {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.plan-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.plan-content {
+  padding: 2rem;
+}
+
+.plan-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.plan-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-btn:hover {
+  background: linear-gradient(135deg, #0e7490, #155e75);
+  transform: translateY(-2px);
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.plan-duration {
+  margin-bottom: 1rem;
+  color: #64748b;
+}
+
+.plan-maxStudents {
+  margin-bottom: 1rem;
+  color: #64748b;
+}
+
+.plan-description {
+  margin-bottom: 1rem;
+  color: #64748b;
+}
+
+.plan-fullDescription {
+  margin-bottom: 1rem;
+  color: #64748b;
+}
+
+

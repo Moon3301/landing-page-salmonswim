@@ -1,0 +1,30 @@
+<div class="pricing-card"
+    [class.popular]="plan.isPopular">
+
+    <div class="popular-badge" *ngIf="plan.isPopular">
+        ⭐ Más Popular
+    </div>
+
+    <div class="pricing-header">
+        <h3 class="plan-name">{{ plan.name }}</h3>
+        <div class="plan-price">
+        <span class="currency">$</span>
+        <span class="amount">{{ plan.price | number:'1.0-0' }}</span>
+        <span class="period">/{{ plan.duration }}</span>
+        </div>
+        <p class="plan-sessions">{{ plan.sessionsPerWeek }} {{ plan.sessionsPerWeek === 1 ? 'clase' : 'clases' }} por semana</p>
+    </div>
+
+    <div class="pricing-features">
+        <div class="feature" *ngFor="let feature of plan.features">
+        <span class="feature-icon">✅</span>
+        <span class="feature-text">{{ feature }}</span>
+        </div>
+    </div>
+
+    @if(!plan.isDisabledBtn){
+    <button class="pricing-btn" (click)="selectPlan(plan)" [class.popular-btn]="plan.isPopular">
+        Seleccionar Plan
+    </button>
+    }
+</div>

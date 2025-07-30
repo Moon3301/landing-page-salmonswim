@@ -15,52 +15,58 @@ export class SwimmingService {
       duration: '45 min',
       level: 'All Levels',
       maxStudents: 1,
-      image: 'https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=800'
+      image: 'https://images.pexels.com/photos/863988/pexels-photo-863988.jpeg?auto=compress&cs=tinysrgb&w=800',
+      isDisabled: false
     },
     {
       id: '2',
-      name: 'Clases Grupales',
-      description: 'Aprende en grupo con máximo 6 estudiantes por clase',
+      name: 'Rama de natación',
+      description: 'Entrena aprende y comparte formando equipo en grupo con máximo 12 estudiantes por pista',
       duration: '60 min',
       level: 'Beginner',
-      maxStudents: 6,
-      image: 'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=800'
+      maxStudents: 12,
+      image: 'https://images.pexels.com/photos/1263349/pexels-photo-1263349.jpeg?auto=compress&cs=tinysrgb&w=800',
+      isDisabled: false
     },
     {
       id: '3',
-      name: 'Natación Infantil',
-      description: 'Clases especializadas para niños de 4 a 12 años',
-      duration: '30 min',
+      name: 'Natación Pre-Rama',
+      description: 'Clases especializadas para niños de 3 a 6 años',
+      duration: '60 min',
       level: 'Beginner',
-      maxStudents: 4,
-      image: 'public/img/4.jpeg'
+      maxStudents: 6,
+      image: 'public/img/4.jpeg',
+      isDisabled: false
     },
     {
       id: '4',
-      name: 'Aqua Fitness',
-      description: 'Ejercicios acuáticos para mejorar condición física',
+      name: 'Clinicas y talleres',
+      description: 'Clases de salvamento y RCP. Tecnicas de uso y vaciado de snorkel',
       duration: '45 min',
       level: 'All Levels',
-      maxStudents: 8,
-      image: 'public/img/5.jpg'
+      maxStudents: 15,
+      image: 'public/img/5.jpg',
+      isDisabled: false
     },
     {
       id: '5',
-      name: 'Perfeccionamiento Técnico',
-      description: 'Mejora tu técnica en los diferentes estilos de natación',
+      name: 'Natacion adultos',
+      description: 'Natacion para papas y adultos que quieren mejorar su condicion fisica',
       duration: '60 min',
-      level: 'Intermediate',
-      maxStudents: 4,
-      image: 'public/img/3.jpg'
+      level: 'All Levels',
+      maxStudents: 12,
+      image: 'public/img/3.jpg',
+      isDisabled: false
     },
     {
       id: '6',
-      name: 'Preparación Competitiva',
-      description: 'Entrenamiento intensivo para competencias y triatlones',
-      duration: '90 min',
-      level: 'Advanced',
-      maxStudents: 6,
-      image: 'public/img/6.png'
+      name: 'Natacion master',
+      description: 'Entrenamiento intensivo. Desde iniciante hasta triatleta',
+      duration: '60 min',
+      level: 'All Levels',
+      maxStudents: 12,
+      image: 'public/img/6.png',
+      isDisabled: false
     }
   ];
 
@@ -76,7 +82,7 @@ export class SwimmingService {
     {
       id: '1',
       name: 'Plan Básico',
-      price: 45000,
+      price: 63000,
       duration: 'mensual',
       sessionsPerWeek: 1,
       features: [
@@ -84,12 +90,14 @@ export class SwimmingService {
         'Acceso a piscina durante clases',
         'Instructor certificado',
         'Evaluación inicial gratuita'
-      ]
+      ],
+      description: 'Plan básico para principiantes',
+      fullDescription: 'Plan básico para principiantes',
     },
     {
       id: '2',
       name: 'Plan Estándar',
-      price: 80000,
+      price: 83000,
       duration: 'mensual',
       sessionsPerWeek: 2,
       isPopular: true,
@@ -98,14 +106,14 @@ export class SwimmingService {
         'Acceso a piscina durante clases',
         'Instructor certificado',
         'Evaluación inicial y seguimiento',
-        'Material de apoyo incluido',
-        '10% descuento en clases adicionales'
-      ]
+      ],
+      description: 'Plan estándar para principiantes',
+      fullDescription: 'Plan estándar para principiantes',
     },
     {
       id: '3',
       name: 'Plan Premium',
-      price: 120000,
+      price: 95000,
       duration: 'mensual',
       sessionsPerWeek: 3,
       features: [
@@ -113,11 +121,10 @@ export class SwimmingService {
         'Acceso libre a piscina',
         'Instructor personal disponible',
         'Evaluación y plan personalizado',
-        'Material de apoyo incluido',
         'Acceso a todas las clases grupales',
-        '20% descuento en servicios adicionales',
-        'Consulta nutricional incluida'
-      ]
+      ],
+      description: 'Plan premium para principiantes',
+      fullDescription: 'Plan premium para principiantes',
     }
   ];
 
@@ -159,12 +166,20 @@ export class SwimmingService {
     }
   ];
 
+  getService(id: string): Observable<SwimmingServiceModel> {
+    return of(this.services.find((service) => service.id === id)!);
+  }
+
   getServices(): Observable<SwimmingServiceModel[]> {
     return of(this.services);
   }
 
   getSchedules(): Observable<Schedule[]> {
     return of(this.schedules);
+  }
+
+  getPricingPlan(id: string): Observable<PricingPlan> {
+    return of(this.pricingPlans.find((plan) => plan.id === id)!);
   }
 
   getPricingPlans(): Observable<PricingPlan[]> {

@@ -1,0 +1,46 @@
+
+
+.payment-methods {
+  margin-bottom: 1.5rem;
+}
+
+.payment-method {
+  margin-bottom: 1rem;
+}
+
+.payment-method input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.payment-method label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.payment-method input[type="radio"]:checked + label {
+  border-color: #4299e1;
+  background-color: #ebf8ff;
+}
+
+.payment-method i {
+  margin-right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.input-with-icon {
+  position: relative;
+}
+
+.input-with-icon i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0;
+  cursor: help;
+}

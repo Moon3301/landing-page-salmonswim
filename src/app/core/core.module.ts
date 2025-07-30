@@ -2,6 +2,7 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SwimmingService } from './services/swimming.service';
+import { CartService } from './services/cart.service';
 import { ContactService } from './services/contact.service';
 
 @NgModule({
@@ -11,6 +12,7 @@ import { ContactService } from './services/contact.service';
   ],
   providers: [
     SwimmingService,
+    CartService,
     ContactService
   ]
 })

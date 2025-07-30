@@ -1,0 +1,16 @@
+<div class="payment-methods">
+  <h3 class="payment-title">Métodos de Pago Disponibles</h3>
+  <div class="payment-grid">
+      <div class="payment-method" *ngFor="let method of paymentMethods">
+          <div class="payment-icon">{{ method.icon }}</div>
+          <div class="payment-info">
+              <h4 class="payment-name">{{ method.name }}</h4>
+              <p class="payment-description">{{ method.description }}</p>
+          </div>
+      </div>
+  </div>
+</div>
+<br>
+<div class="payment-note">
+  <p>💳 Pagos 100% seguros con encriptación SSL. Puedes cancelar tu suscripción en cualquier momento.</p>
+</div>

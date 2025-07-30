@@ -17,6 +17,9 @@ export class PricingComponent implements OnInit {
   ngOnInit() {
     this.swimmingService.getPricingPlans().subscribe(plans => {
       this.pricingPlans = plans;
+      this.pricingPlans.forEach((plan) => {
+        plan.isDisabledBtn = false;
+      });
     });
 
     this.swimmingService.getPaymentMethods().subscribe(methods => {
