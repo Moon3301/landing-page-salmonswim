@@ -1,9 +1,17 @@
-<div class="payment-methods">
+<div [ngClass]="{'payment-methods': showCard}">
   <h3 class="payment-title">Métodos de Pago Disponibles</h3>
   <div class="payment-grid">
-      <div class="payment-method" *ngFor="let method of paymentMethods">
-          <div class="payment-icon">{{ method.icon }}</div>
+      <div
+        class="payment-method"
+        *ngFor="let method of paymentMethods"
+        [class.selectable]="selectable"
+        [class.selected]="selectedMethodId === (method.id || method.name)"
+        (click)="onSelect(method)"
+      >
+          <!-- <div class="payment-icon">{{ method.icon }}</div> -->
+          
           <div class="payment-info">
+            <div class="payment-icon">{{ method.icon }}</div>
               <h4 class="payment-name">{{ method.name }}</h4>
               <p class="payment-description">{{ method.description }}</p>
           </div>
@@ -12,5 +20,5 @@
 </div>
 <br>
 <div class="payment-note">
-  <p>💳 Pagos 100% seguros con encriptación SSL. Puedes cancelar tu suscripción en cualquier momento.</p>
+  <p> Pagos 100% seguros con encriptación SSL. Puedes cancelar tu suscripción en cualquier momento.</p>
 </div>

@@ -5,6 +5,8 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+
+
 .payment-title {
   text-align: center;
   font-size: 2rem;
@@ -13,9 +15,18 @@
   margin-bottom: 2rem;
 }
 
+.selectable {
+  cursor: pointer;
+}
+
+.selected {
+  border-color: #0891b2;
+  background: #f0f9ff;
+}
+
 .payment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -36,16 +47,18 @@
 }
 
 .payment-icon {
+  text-align: center;
   font-size: 2rem;
   flex-shrink: 0;
 }
 
 .payment-info {
+  text-align: center;
   flex: 1;
 }
 
 .payment-name {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #1e293b;
   margin-bottom: 0.25rem;
@@ -66,4 +79,5 @@
   border: 1px solid #bae6fd;
   border-radius: 10px;
   color: #0c4a6e;
+  margin-bottom: 1rem;
 }
