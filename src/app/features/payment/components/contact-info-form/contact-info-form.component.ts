@@ -10,7 +10,7 @@ export class ContactInfoForm {
 
   checkoutForm = {
     email: '',
-    country: 'España',
+    country: 'Chile',
     firstName: '',
     lastName: '',
     address: '',

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartService } from '../../../../core/services/cart.service';
 import { ShoppingCart } from '../../../../core/models/shopping-cart.models';
-import { PricingPlan } from '../../../../core/models/swimming.models';
+import { PaymentMethod, PricingPlan } from '../../../../core/models/swimming.models';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -80,5 +80,9 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     console.log('Form submitted', this.checkoutForm);
     // Here you would typically send the payment details to your backend
     // and handle the payment processing
+  }
+
+  onPaymentMethodSelected(paymentMethod: any){
+    console.log('Payment method selected', paymentMethod);
   }
 }

@@ -12,7 +12,7 @@
           <shared-card-plan *ngFor="let plan of pricingPlans" [plan]="plan"></shared-card-plan>
       </div>
 
-      <shared-payment-methods></shared-payment-methods>
+      <shared-payment-methods [selectable]="false" [showCard]="true"></shared-payment-methods>
 
     </div>
 </section>
