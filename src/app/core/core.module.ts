@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SwimmingService } from './services/swimming.service';
 import { CartService } from './services/cart.service';
+import { CartSidebarService } from './services/cart-sidebar.service';
 import { ContactService } from './services/contact.service';
 
 @NgModule({
@@ -13,6 +14,7 @@ import { ContactService } from './services/contact.service';
   providers: [
     SwimmingService,
     CartService,
+    CartSidebarService,
     ContactService
   ]
 })

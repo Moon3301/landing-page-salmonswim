@@ -3,12 +3,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class CartSidebarService {
+  
   private _open$ = new BehaviorSubject<boolean>(false);
 
   /** Observable that emits the current open/closed state */
   readonly open$: Observable<boolean> = this._open$.asObservable();
-
-  
 
   /** Toggle sidebar visibility */
   toggle(): void {

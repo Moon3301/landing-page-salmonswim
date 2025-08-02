@@ -39,7 +39,7 @@
               </div>
             </div>
             <div class="item-price">
-              {{item.plan.price * item.quantity | currency:'USD'}}
+              {{item.plan.price * item.quantity | currency:'CLP'}}
             </div>
           </div>
         </div>
@@ -47,15 +47,15 @@
         <div class="order-totals">
           <div class="subtotal">
             <span>Subtotal</span>
-            <span>{{subtotal | currency:'USD'}}</span>
+            <span>{{subtotal | currency:'CLP'}}</span>
           </div>
           <div class="taxes">
             <span>IVA (21%)</span>
-            <span>{{taxes | currency:'USD'}}</span>
+            <span>{{taxes | currency:'CLP'}}</span>
           </div>
           <div class="total">
             <span>Total</span>
-            <span>{{total | currency:'USD'}}</span>
+            <span>{{total | currency:'CLP'}}</span>
           </div>
         </div>
 

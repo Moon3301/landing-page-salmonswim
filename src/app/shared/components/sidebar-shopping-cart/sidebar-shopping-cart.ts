@@ -12,13 +12,13 @@ import { Router } from '@angular/router';
 
 export class SidebarShoppingCart implements OnInit, OnDestroy  {
 
-  
+
   isOpen = false;
 
   cart$ = this.cartService.cart$;
 
   constructor(private router: Router,private cartSidebarService: CartSidebarService, private cartService: CartService) {
-    
+
   }
 
   ngOnInit(): void {
@@ -28,7 +28,7 @@ export class SidebarShoppingCart implements OnInit, OnDestroy  {
   }
 
   ngOnDestroy(): void {
-    
+
   }
 
   close() {
@@ -53,5 +53,6 @@ export class SidebarShoppingCart implements OnInit, OnDestroy  {
 
   goToCheckout() {
     this.router.navigate(['payment/checkout']);
+    this.cartSidebarService.close();
   }
 }
