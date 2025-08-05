@@ -42,3 +42,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
+
+.form-row-full{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}

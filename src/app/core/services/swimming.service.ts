@@ -142,26 +142,26 @@ export class SwimmingService {
   private paymentMethods: PaymentMethod[] = [
     {
       id: '1',
-      name: 'Tarjetas de Crédito/Débito',
-      icon: '💳',
+      name: 'WebPay',
+      icon: 'public/img/1.Webpay_FB_800.png',
       description: 'Visa, Mastercard, American Express'
     },
     {
       id: '2',
-      name: 'Transferencia Bancaria',
-      icon: '🏦',
-      description: 'Transferencia directa desde tu banco'
+      name: 'Mercado Pago',
+      icon: 'public/img/logo_mercado_pago_1.png',
+      description: 'Paga con tu cuenta de mercado pago'
     },
     {
       id: '3',
-      name: 'PayPal',
-      icon: '💰',
-      description: 'Pago seguro con tu cuenta PayPal'
+      name: 'Khipu',
+      icon: 'public/img/logo_khipu_3.png',
+      description: 'Pago seguro con tu cuenta Khipu'
     },
     {
       id: '4',
-      name: 'WebPay',
-      icon: '🇨🇱',
+      name: 'PayPal',
+      icon: 'public/img/logo-paypal-1.png',
       description: 'Plataforma de pago chilena'
     }
   ];

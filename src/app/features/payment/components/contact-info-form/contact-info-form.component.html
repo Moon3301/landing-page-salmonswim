@@ -1,10 +1,61 @@
 <!-- Contact Information -->
 <section class="checkout-section">
   <h2>Información de contacto</h2>
-  <div class="form-group">
-    <label for="email">Correo electrónico</label>
-    <input type="email" id="email" placeholder="correo@ejemplo.com" class="form-control">
-  </div>
+  <form [formGroup]="contactForm">
+
+    <div class="form-row-full">
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" formControlName="email" placeholder="correo@ejemplo.com" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="first-name">Nombre</label>
+        <input type="text" id="first-name" formControlName="firstName" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="last-name">Apellidos</label>
+        <input type="text" id="last-name" formControlName="lastName" class="form-control">
+      </div>
+
+    </div>
+
+    <div class="form-row-full">
+
+      <div class="form-group">
+        <label for="phone">Teléfono</label>
+        <input type="text" id="phone" formControlName="phone" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="address">Dirección</label>
+        <input type="text" id="address" formControlName="address" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <label for="city">Ciudad</label>
+        <select id="city" class="form-control" (change)="onCityChange($event.target)">
+          <option *ngFor="let region of regions" [value]="region.id">{{ region.name }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="region">Comuna</label>
+        <select id="region" class="form-control">
+          <option *ngFor="let commune of communes" [value]="commune.id">{{ commune.name }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="postal-code">Código postal</label>
+        <input type="text" id="postal-code" formControlName="postalCode" class="form-control">
+      </div>
+    </div>
+
+    
+  </form>
 
   <!-- <div class="form-group">
     <label for="country">País/Región</label>
@@ -17,17 +68,6 @@
       <option>Perú</option>
     </select>
   </div> -->
-
-  <div class="form-row">
-    <div class="form-group">
-      <label for="first-name">Nombre</label>
-      <input type="text" id="first-name" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="last-name">Apellidos</label>
-      <input type="text" id="last-name" class="form-control">
-    </div>
-  </div>
 
   <!-- <div class="form-group">
     <label for="address">Dirección</label>

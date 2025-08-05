@@ -22,6 +22,7 @@
 .selected {
   border-color: #0891b2;
   background: #f0f9ff;
+  border-bottom: 2px solid #0891b2;
 }
 
 .payment-grid {
@@ -44,12 +45,18 @@
 .payment-method:hover {
   border-color: #0891b2;
   background: #f0f9ff;
+  border-bottom: 2px solid #0891b2;
 }
 
 .payment-icon {
   text-align: center;
   font-size: 2rem;
   flex-shrink: 0;
+  margin-bottom: 2rem;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+
 }
 
 .payment-info {
