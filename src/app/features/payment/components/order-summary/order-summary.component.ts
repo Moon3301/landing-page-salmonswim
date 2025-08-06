@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, Output, EventEmitter } from '@angular/core';
+import { ShoppingCartContainer } from '../../../../core/models/shopping-cart.models';
 import { CartService } from '../../../../core/services/cart.service';
 import { ShoppingCart } from '../../../../core/models/shopping-cart.models';
 import { Subscription } from 'rxjs';
@@ -12,11 +13,15 @@ import { Subscription } from 'rxjs';
 export class OrderSummary implements OnInit, OnDestroy {
 
   cartItems: ShoppingCart[] = [];
+  /** Emits a human-readable summary of the cart each time it changes */
+  @Output() summaryChange = new EventEmitter<ShoppingCartContainer>();
   subtotal = 0;
   taxes = 0;
   total = 0;
 
   private cartSubscription: Subscription | undefined;
+
+  
 
   constructor(private cartService: CartService) {}
 
@@ -24,6 +29,8 @@ export class OrderSummary implements OnInit, OnDestroy {
     this.cartSubscription = this.cartService.cart$.subscribe(cart => {
       this.cartItems = cart;
       this.calculateTotals();
+      // Emit updated summary so parent components can react
+      this.summaryChange.emit(this.cartService.getContainer());
     });
   }
 

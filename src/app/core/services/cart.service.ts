@@ -44,6 +44,31 @@ export class CartService {
     return this.cart.reduce((t, i) => t + i.quantity, 0);
   }
 
+  /**
+   * Returns a human-readable summary of items in the cart
+   * Example: "2 x Plan Básico, 1 x Plan Estándar"
+   */
+  /**
+   * Returns a full container object representing current cart
+   */
+  getContainer() {
+    const subtotal = this.getTotal();
+    const taxes = subtotal * 0.21;
+    return {
+      items: [...this.cart],
+      subtotal,
+      taxes,
+      total: subtotal + taxes,
+    } as import("../models/shopping-cart.models").ShoppingCartContainer;
+  }
+
+  getSummary(): string {
+    if (this.cart.length === 0) return '';
+    return this.cart
+      .map(i => `${i.quantity} x ${i.plan.name}`)
+      .join(', ');
+  }
+
   private persistAndEmit(cart: ShoppingCart[]): void {
     try {
       localStorage.setItem(this.STORAGE_KEY, JSON.stringify(cart));

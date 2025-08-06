@@ -9,11 +9,7 @@
         <!-- Contact Information -->
         <payment-contact-info-form (formChange)="onContactFormChange($event)"></payment-contact-info-form>
 
-        <section class="checkout-section">
-
-          <shared-payment-methods [selectable]="true" (selectionChange)="onPaymentMethodSelected($event)" [showCard]="false"></shared-payment-methods>
-
-        </section>
+        <shared-payment-methods [selectable]="true" (selectionChange)="onPaymentMethodSelected($event)" [showCard]="false"></shared-payment-methods>
 
         <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">Pagar ahora</button>
 
@@ -23,7 +19,7 @@
       </div>
 
       <!-- Right Column - Order Summary -->
-      <payment-order-summary></payment-order-summary>
+      <payment-order-summary (summaryChange)="onSummarySelected($event)"></payment-order-summary>
     </div>
   </div>
 </main>

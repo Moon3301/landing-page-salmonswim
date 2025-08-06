@@ -6,7 +6,7 @@
     justify-content: center;
     overflow: hidden;
   }
-  
+
   .hero-background {
     position: absolute;
     top: 0;
@@ -17,26 +17,26 @@
                 url('https://media.istockphoto.com/id/465383082/es/foto/hembra-nadador-en-la-piscina.jpg?s=612x612&w=0&k=20&c=qDBjlQNK7H-rx7L1tbzzLLQbOUJKGzFSiJJ-vt2RMMc=') center/cover;
     z-index: -1;
   }
-  
+
   .hero-content {
     width: 100%;
     padding: 2rem 0;
-    
+    margin-top: 2.5rem;
   }
-  
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
   }
-  
+
   .hero-text {
     text-align: center;
     color: white;
     max-width: 800px;
     margin: 0 auto;
   }
-  
+
   .hero-title {
     opacity: 0;
     transform: translateY(30px);
@@ -52,14 +52,14 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .highlight {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    background: linear-gradient(135deg, #00c5e7, #00a1c9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .hero-subtitle {
     opacity: 0;
     transform: translateY(30px);
@@ -67,14 +67,14 @@
     font-size: 1.25rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    
+
   }
 
   .hero-subtitle.animate {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .hero-actions {
     opacity: 0;
     transform: translateY(30px);
@@ -89,7 +89,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .btn-primary {
     background: linear-gradient(135deg, #059669, #047857);
     color: white;
@@ -101,12 +101,12 @@
     transition: all 0.3s ease;
     box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
   }
-  
+
   .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(5, 150, 105, 0.5);
   }
-  
+
   .btn-secondary {
     background: rgba(255, 255, 255, 0.1);
     color: white;
@@ -119,13 +119,13 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
   }
-  
+
   .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.2);
     border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
   }
-  
+
   .hero-stats {
     opacity: 0;
     transform: translateY(30px);
@@ -139,11 +139,11 @@
     opacity: 1;
     transform: translateY(0);
   }
-  
+
   .stat {
     text-align: center;
   }
-  
+
   .stat-number {
     display: block;
     font-size: 2.5rem;
@@ -151,14 +151,14 @@
     line-height: 1;
     margin-bottom: 0.5rem;
   }
-  
+
   .stat-label {
     font-size: 0.9rem;
     opacity: 0.9;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -169,30 +169,30 @@
       transform: translateY(0);
     }
   }
-  
+
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2.5rem;
     }
-    
+
     .hero-subtitle {
       font-size: 1.1rem;
     }
-    
+
     .hero-actions {
       flex-direction: column;
       align-items: center;
     }
-    
+
     .hero-stats {
       gap: 2rem;
     }
-    
+
     .stat-number {
       font-size: 2rem;
     }
   }
-  
+
   @media (max-width: 480px) {
     .hero-stats {
       flex-direction: column;

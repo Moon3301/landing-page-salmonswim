@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContactForm } from '../../../../core/models/contact-payment.model';
 import { PaymentMethod } from '../../../../core/models/swimming.models';
+import { ShoppingCartContainer } from '../../../../core/models/shopping-cart.models';
 
 @Component({
   standalone: false,
@@ -13,6 +14,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 
   contactInfo?: ContactForm;
   paymentMethod?: PaymentMethod;
+  summary?: ShoppingCartContainer;
 
   // Form model
   checkoutForm = {
@@ -33,11 +35,11 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    
+
   }
 
   ngOnDestroy(): void {
-    
+
   }
 
   onSubmit(): void {
@@ -50,9 +52,15 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     //   return;
     // }
 
+    // if(!this.summary){
+    //   console.warn('No summary selected');
+    //   return;
+    // }
+
     const checkoutData = {
       contact: this.contactInfo,
-      paymentMethod: this.paymentMethod
+      paymentMethod: this.paymentMethod,
+      summary: this.summary
     };
 
     console.log('Checkout data', checkoutData);
@@ -73,4 +81,12 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   onContactFormChange(form: ContactForm){
     this.contactInfo = form;
   }
+
+  onSummarySelected(summary: ShoppingCartContainer){
+    this.summary = summary;
+    console.log('Summary selected', summary);
+  }
+
+
+
 }

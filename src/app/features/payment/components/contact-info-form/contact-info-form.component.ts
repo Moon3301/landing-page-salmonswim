@@ -29,7 +29,6 @@ export class ContactInfoForm implements OnInit {
       phone: ['', [Validators.required]],
       address: ['', [Validators.required]],
       postalCode: ['', [Validators.required]],
-      city: ['', [Validators.required]],
       region: ['', [Validators.required]],
       commune: ['', [Validators.required]]
     });
@@ -40,7 +39,7 @@ export class ContactInfoForm implements OnInit {
 
     // emit initial form value
     this.formChange.emit(this.contactForm.value as ContactForm);
-    
+
     // emit on every change
     this.contactForm.valueChanges.subscribe(value => {
       this.formChange.emit(value as ContactForm);
@@ -49,24 +48,24 @@ export class ContactInfoForm implements OnInit {
     this.regions.forEach(region => {
       this.communes = region.communes;
     });
-    
+
 
   }
 
   onCityChange(event: any): void {
     console.log(event.value);
-    
+
     this.communes = this.regions.find(region => region.id === event.value)?.communes || [];
   }
 
-  
+
 
   onSubmit(): void {
     // emit latest value explicitly if needed
     this.formChange.emit(this.contactForm.value as ContactForm);
     // TODO: Implement form submission logic
     console.log(this.contactForm.value);
-    
+
   }
 
 }
