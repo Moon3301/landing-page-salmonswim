@@ -12,39 +12,23 @@ import { PaymentMethod } from '../../../../core/models/swimming.models';
 export class CheckoutComponent implements OnInit, OnDestroy {
 
   contactInfo?: ContactForm;
-  paymentMethod?: PaymentMethod;
-
-  // Form model
-  checkoutForm = {
-    email: '',
-    paymentMethod: 'credit-card',
-    cardNumber: '',
-    expiryDate: '',
-    cvv: '',
-    cardName: '',
-    country: 'España',
-    firstName: '',
-    lastName: '',
-    address: '',
-    postalCode: '',
-    city: ''
-  };
+  // paymentMethod?: PaymentMethod;
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    
+
   }
 
   ngOnDestroy(): void {
-    
+
   }
 
   onSubmit(): void {
-    // if(!this.contactInfo){
-    //   console.warn('No contact info');
-    //   return;
-    // }
+    if(!this.contactInfo){
+      console.warn('No contact info');
+      return;
+    }
     // if(!this.paymentMethod){
     //   console.warn('No payment method selected');
     //   return;
@@ -52,23 +36,22 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 
     const checkoutData = {
       contact: this.contactInfo,
-      paymentMethod: this.paymentMethod
+      // paymentMethod: this.paymentMethod
     };
 
     console.log('Checkout data', checkoutData);
 
     // TODO: call backend service then navigate
-    // this.router.navigate(['/payment/processing']);
+    this.router.navigate(['/payment/confirmation']);
     // TODO: Implement form submission logic
-    console.log('Form submitted', this.checkoutForm);
     // Here you would typically send the payment details to your backend
     // and handle the payment processing
   }
 
-  onPaymentMethodSelected(paymentMethod: PaymentMethod){
-    this.paymentMethod = paymentMethod;
-    console.log('Payment method selected', paymentMethod);
-  }
+  // onPaymentMethodSelected(paymentMethod: PaymentMethod){
+  //   this.paymentMethod = paymentMethod;
+  //   console.log('Payment method selected', paymentMethod);
+  // }
 
   onContactFormChange(form: ContactForm){
     this.contactInfo = form;

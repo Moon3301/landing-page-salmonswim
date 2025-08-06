@@ -1,1 +1,26 @@
-<p>confirmation works!</p>
+<shared-header></shared-header>
+<main class="checkout-page">
+  <div class="container">
+    <payment-checkout-steps [step]="2"></payment-checkout-steps>
+    <div class="checkout-grid">
+      <!-- Left Column - Payment Form -->
+      <div class="checkout-form">
+        <h1 class="page-title">Finalizar compra</h1>
+
+        <section class="checkout-section">
+          <shared-payment-methods [selectable]="true" (selectionChange)="onPaymentMethodSelected($event)" [showCard]="false"></shared-payment-methods>
+        </section>
+
+        <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">Pagar ahora</button>
+
+        <p class="secure-payment">
+          <i class="fas fa-lock"></i> Pago seguro con encriptación SSL
+        </p>
+      </div>
+
+      <!-- Right Column - Order Summary -->
+      <payment-order-summary></payment-order-summary>
+    </div>
+  </div>
+</main>
+<shared-footer></shared-footer>

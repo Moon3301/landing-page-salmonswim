@@ -5,18 +5,25 @@
     <div class="container">
 
       <div class="product-grid">
-        <shared-card-service [service]="service"></shared-card-service>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <shared-card-service [service]="service"></shared-card-service>
+        </div>
 
         <div class="product-content">
           <h3 class="product-title">{{ service.name }}</h3>
-          <p class="product-description">{{ service.description }}</p>
-          <p class="product-duration">Duración: {{ service.duration }}</p>
-          <p class="product-maxStudents">Máx. {{ service.maxStudents }} {{ service.maxStudents === 1 ? 'estudiante' : 'estudiantes' }}</p>
-          <p class="product-level">Nivel: {{ service.level }}</p>
+          <p class="product-description">{{ service.fullDescription }}</p>
+          <p class="product-duration"><b>Duración:</b> {{ service.duration }}</p>
+          <p class="product-maxStudents"><b>Máx.:</b> {{ service.maxStudents }} {{ service.maxStudents === 1 ? 'estudiante' : 'estudiantes' }}</p>
+          <p class="product-level"><b>Nivel:</b> {{ service.level }}</p>
 
-          <button class="product-btn">Ver planes disponibles</button>
+          <button class="product-btn" (click)="scrollToSection($event, 'precios')">Ver planes disponibles</button>
         </div>
 
+      </div>
+
+      <div class="schedule-grid">
+        <home-schedule [scheduleServices]="[service.name]"></home-schedule>
       </div>
     </div>
   </section>

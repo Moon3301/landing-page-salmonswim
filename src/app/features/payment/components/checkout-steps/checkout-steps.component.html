@@ -1,0 +1,12 @@
+<nav class="checkout-steps">
+  <ul>
+    <li [ngClass]="{ active: step === 1, completed: step > 1 }">
+      <span class="step-number">1</span>
+      <span class="step-label">Datos de contacto</span>
+    </li>
+    <li [ngClass]="{ active: step === 2 }">
+      <span class="step-number">2</span>
+      <span class="step-label">Método de pago</span>
+    </li>
+  </ul>
+</nav>

@@ -28,4 +28,31 @@ export class DetailServiceComponent implements OnInit {
       });
     });
   }
+
+  goToPlans() {
+    this.router.navigate(['/home']);
+  }
+
+  scrollToSection(event: Event, sectionId: string) {
+    event.preventDefault();
+
+    const doScroll = () => {
+      // pequeño delay para asegurar que el DOM se renderice si hubo navegación
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const headerHeight = 70;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: elementPosition - headerHeight, behavior: 'smooth' });
+        }
+      });
+    };
+
+    // Si estamos fuera de la home, navega primero y luego hace scroll
+    if (this.router.url !== '/') {
+      this.router.navigate(['/'], { fragment: sectionId }).then(() => doScroll());
+    } else {
+      doScroll();
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Schedule } from '../../../../core/models/swimming.models';
 import { SwimmingService } from '../../../../core/services/swimming.service';
 
@@ -9,6 +9,10 @@ import { SwimmingService } from '../../../../core/services/swimming.service';
   styleUrls: ['./schedule.component.css']
 })
 export class ScheduleComponent implements OnInit {
+
+  @Input()
+  scheduleServices: string[] = [];
+
   schedules: Schedule[] = [];
 
   constructor(private swimmingService: SwimmingService) {}
