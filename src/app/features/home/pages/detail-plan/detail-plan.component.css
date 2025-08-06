@@ -3,11 +3,16 @@
   background: linear-gradient(135deg, #f8fafc, #e2e8f0);
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .plan-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
-  padding: 2rem;
 }
 
 .plan-card {
@@ -29,7 +34,7 @@
 .plan-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #0e7490;
   margin-bottom: 1rem;
 }
 
@@ -70,11 +75,14 @@
 .plan-description {
   margin-bottom: 1rem;
   color: #64748b;
+  font-size: 0.9rem;
 }
 
 .plan-fullDescription {
   margin-bottom: 1rem;
   color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 

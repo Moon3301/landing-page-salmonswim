@@ -3,19 +3,23 @@
   <section id="plan" class="plan">
     <div class="container">
       <div class="plan-grid">
-        <shared-card-plan  [plan]="plan"></shared-card-plan>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <shared-card-plan  [plan]="plan"></shared-card-plan>
+        </div>
 
         <div class="plan-content">
           <h3 class="plan-title">{{ plan.name }}</h3>
-          <p class="plan-description">{{ plan.description }}</p>
           <p class="plan-fullDescription">{{ plan.fullDescription }}</p>
-          <p class="plan-price">${{ plan.price | number:'1.0-0' }}</p>
-          <p class="plan-duration">Duración: {{ plan.duration }}</p>
-          <p class="plan-maxStudents">Máx. {{ plan.sessionsPerWeek }} {{ plan.sessionsPerWeek === 1 ? 'clase' : 'clases' }} por semana</p>
+          <!-- <p class="plan-price">${{ plan.price | number:'1.0-0' }}</p> -->
+          <p class="plan-duration"><b>Duración:</b> {{ plan.duration }}</p>
+          <p class="plan-maxStudents"><b>Máx.:</b> {{ plan.sessionsPerWeek }} {{ plan.sessionsPerWeek === 1 ? 'clase' : 'clases' }} por semana</p>
 
           <button class="plan-btn" (click)="addToCart(plan)">Agregar al carro</button>
         </div>
       </div>
+
+     
     </div>
 
   </section>

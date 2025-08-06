@@ -11,6 +11,7 @@ import { ContactInfoForm } from './components/contact-info-form/contact-info-for
 import { PaymentMethods } from './components/payment-methods/payment-methods.component';
 import { CreditCardForm } from './components/credit-card-form/credit-card-form.component';
 import { OrderSummary } from './components/order-summary/order-summary.component';
+import { CheckoutSteps } from './components/checkout-steps/checkout-steps.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { OrderSummary } from './components/order-summary/order-summary.component
       ContactInfoForm,
       PaymentMethods,
       CreditCardForm,
-      OrderSummary
+      OrderSummary,
+      CheckoutSteps
     ],
     imports: [
       CommonModule,
