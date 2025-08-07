@@ -48,7 +48,7 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     console.log('Checkout data', checkoutData);
 
     // TODO: call backend service then navigate
-    this.router.navigate(['/payment/confirmation']);
+    this.router.navigate(['/payment/payment-method']);
     // TODO: Implement form submission logic
     // Here you would typically send the payment details to your backend
     // and handle the payment processing
@@ -63,10 +63,10 @@ export class CheckoutComponent implements OnInit, OnDestroy {
     this.contactInfo = form;
   }
 
-  onSummarySelected(summary: ShoppingCartContainer){
-    this.summary = summary;
-    console.log('Summary selected', summary);
-  }
+  // onSummarySelected(summary: ShoppingCartContainer){
+  //   this.summary = summary;
+  //   console.log('Summary selected', summary);
+  // }
 
 
 

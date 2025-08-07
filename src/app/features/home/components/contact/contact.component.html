@@ -6,12 +6,12 @@
             ¿Listo para comenzar tu aventura acuática? Nos encantaría conocerte
         </p>
         </div>
-        
+
         <div class="contact-content">
         <div class="contact-info">
             <div class="info-card">
             <h3 class="info-title">Información de Contacto</h3>
-            
+
             <div class="info-item">
                 <div class="info-icon">📞</div>
                 <div class="info-details">
@@ -19,7 +19,7 @@
                 <p>{{ contactInfo?.phone }}</p>
                 </div>
             </div>
-            
+
             <div class="info-item">
                 <div class="info-icon">✉️</div>
                 <div class="info-details">
@@ -27,7 +27,7 @@
                 <p>{{ contactInfo?.email }}</p>
                 </div>
             </div>
-            
+
             <div class="info-item">
                 <div class="info-icon">💬</div>
                 <div class="info-details">
@@ -35,7 +35,7 @@
                 <p>{{ contactInfo?.whatsapp }}</p>
                 </div>
             </div>
-            
+
             <div class="info-item">
                 <div class="info-icon">📍</div>
                 <div class="info-details">
@@ -43,7 +43,7 @@
                 <p>{{ contactInfo?.address }}</p>
                 </div>
             </div>
-            
+
             <div class="social-media">
                 <h4>Síguenos</h4>
                 <div class="social-links">
@@ -56,62 +56,75 @@
                 </div>
             </div>
             </div>
-            
+
             <div class="location-map">
-            <div class="map-placeholder">
+              <div class="map-placeholder">
                 <div class="map-content">
-                <h4>📍 Ubicación</h4>
-                <p>Encuentra nuestras instalaciones</p>
-                <button class="map-btn">Ver en Google Maps</button>
+                  <h4>📍 Ubicación</h4>
+                  <p>Encuentra nuestras instalaciones</p>
+
+                  <div class="map-embed">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.9203553030206!2d-70.53296112573194!3d-33.45138147338908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cfc81b79cd5b%3A0x4b4972df014f4642!2sMar%C3%ADa%20Monvel%2050%2C%20La%20Reina%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1754514818504!5m2!1ses!2scl"
+                      width="500"
+                      height="450"
+                      style="border:0;"
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
+
+                  <button class="map-btn" (click)="redirectToGoogleMaps()">Ver en Google Maps</button>
                 </div>
-            </div>
+              </div>
             </div>
         </div>
-        
+
         <div class="contact-form-container">
             <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
             <h3 class="form-title">Envíanos un Mensaje</h3>
-            
+
             <div class="form-row">
                 <div class="form-group">
                 <label for="name">Nombre Completo *</label>
-                <input type="text" 
-                        id="name" 
+                <input type="text"
+                        id="name"
                         formControlName="name"
                         [class.error]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-                <div class="error-message" 
+                <div class="error-message"
                         *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
                     El nombre es requerido
                 </div>
                 </div>
-                
+
                 <div class="form-group">
                 <label for="phone">Teléfono *</label>
-                <input type="tel" 
-                        id="phone" 
+                <input type="tel"
+                        id="phone"
                         formControlName="phone"
                         [class.error]="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
-                <div class="error-message" 
+                <div class="error-message"
                         *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched">
                     El teléfono es requerido
                 </div>
                 </div>
             </div>
-            
+
             <div class="form-row">
                 <div class="form-group">
                 <label for="email">Email *</label>
-                <input type="email" 
-                        id="email" 
+                <input type="email"
+                        id="email"
                         formControlName="email"
                         [class.error]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-                <div class="error-message" 
+                <div class="error-message"
                         *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
                     <span *ngIf="contactForm.get('email')?.errors?.['required']">El email es requerido</span>
                     <span *ngIf="contactForm.get('email')?.errors?.['email']">Ingresa un email válido</span>
                 </div>
                 </div>
-                
+
                 <div class="form-group">
                 <label for="service">Servicio de Interés</label>
                 <select id="service" formControlName="service">
@@ -125,27 +138,27 @@
                 </select>
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label for="message">Mensaje *</label>
-                <textarea id="message" 
-                        formControlName="message" 
+                <textarea id="message"
+                        formControlName="message"
                         rows="5"
                         placeholder="Cuéntanos sobre tus objetivos, experiencia previa o cualquier pregunta que tengas..."
                         [class.error]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"></textarea>
-                <div class="error-message" 
+                <div class="error-message"
                     *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
                 El mensaje es requerido
                 </div>
             </div>
-            
-            <button type="submit" 
-                    class="submit-btn" 
+
+            <button type="submit"
+                    class="submit-btn"
                     [disabled]="contactForm.invalid || isSubmitting">
                 <span *ngIf="!isSubmitting">Enviar Mensaje</span>
                 <span *ngIf="isSubmitting">Enviando...</span>
             </button>
-            
+
             <div class="success-message" *ngIf="submitSuccess">
                 ✅ {{ submitMessage }}
             </div>

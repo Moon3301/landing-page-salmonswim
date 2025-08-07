@@ -57,4 +57,17 @@ export class ContactComponent implements OnInit {
       });
     }
   }
+
+  redirectToGoogleMaps() {
+
+    if (!this.contactInfo?.address) {
+      return;
+    }
+
+    const address = encodeURIComponent(this.contactInfo?.address);
+
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${address}`;
+
+    window.open(googleMapsUrl, '_blank');
+  }
 }

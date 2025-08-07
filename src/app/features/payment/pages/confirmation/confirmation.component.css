@@ -2,6 +2,7 @@
   padding: 3rem 0;
   background-color: #f8f9fa;
   min-height: calc(100vh - 120px);
+  margin-top: 2rem;
 }
 
 .container {
@@ -35,6 +36,7 @@
 }
 
 .page-title {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #2c3e50;

@@ -1,1 +1,23 @@
-<p>success works!</p>
+<shared-header></shared-header>
+<main class="checkout-page">
+  <div class="container">
+    <payment-checkout-steps [step]="3"></payment-checkout-steps>
+    <div class="checkout-grid">
+      <!-- Left Column - Payment Form -->
+      <div class="checkout-form">
+        <h1 class="page-title">Confirmación</h1>
+
+        <p class="page-description">Gracias por su compra. Su pedido ha sido procesado exitosamente.</p>
+
+        <div class="page-order-detail">
+          <h2>Detalles del pedido</h2>
+          <p>Numero de pedido: <span>123456</span></p>
+          <p>Fecha: <span>2023-01-01</span></p>
+          <p>Estado: <span>Enviado</span></p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">Volver al inicio</button>
+      </div>
+    </div>
+  </div>
+</main>
+<shared-footer></shared-footer>

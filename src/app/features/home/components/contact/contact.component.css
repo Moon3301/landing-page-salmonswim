@@ -33,10 +33,11 @@
     line-height: 1.6;
 }
 
+
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .contact-info {
@@ -140,13 +141,21 @@
 }
 
 .map-placeholder {
-    height: 250px;
-    background: linear-gradient(135deg, #0891b2, #0e7490);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
+  background: linear-gradient(135deg, #0891b2, #0e7490);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  flex-direction: column;
+}
+
+.map-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .map-content h4 {
@@ -157,18 +166,19 @@
 .map-content p {
     margin-bottom: 1.5rem;
     opacity: 0.9;
+    max-width: 400px;
 }
 
 .map-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .map-btn:hover {
@@ -176,10 +186,21 @@
     border-color: rgba(255, 255, 255, 0.5);
 }
 
+.map-embed {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9; /* relación para hacerlo responsivo */
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
 .contact-form-container {
     background: white;
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 2rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     height: fit-content;
 }
@@ -217,7 +238,7 @@
     padding: 1rem;
     border: 2px solid #e2e8f0;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     background: white;
 }
@@ -308,5 +329,9 @@
     .social-links {
         flex-direction: column;
         align-items: center;
+    }
+
+    .map-embed {
+      aspect-ratio: 4 / 3;
     }
 }

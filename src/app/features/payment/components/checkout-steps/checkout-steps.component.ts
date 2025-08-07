@@ -13,5 +13,5 @@ export class CheckoutSteps {
    * 1: Datos de contacto
    * 2: Selección de método de pago
    */
-  @Input() step: 1 | 2 = 1;
+  @Input() step: 1 | 2 | 3 = 1;
 }

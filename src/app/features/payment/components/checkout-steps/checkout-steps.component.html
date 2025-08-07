@@ -4,9 +4,13 @@
       <span class="step-number">1</span>
       <span class="step-label">Datos de contacto</span>
     </li>
-    <li [ngClass]="{ active: step === 2 }">
+    <li [ngClass]="{ active: step === 2, completed: step > 2 }">
       <span class="step-number">2</span>
       <span class="step-label">Método de pago</span>
+    </li>
+    <li [ngClass]="{ active: step === 3, completed: step > 3 }">
+      <span class="step-number">3</span>
+      <span class="step-label">Confirmación</span>
     </li>
   </ul>
 </nav>

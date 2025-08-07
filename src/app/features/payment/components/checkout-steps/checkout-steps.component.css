@@ -1,6 +1,6 @@
 .checkout-steps {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .checkout-steps ul {
@@ -35,6 +35,22 @@
   z-index: -1;
 }
 
+.checkout-steps li.active::after {
+  background-color: #00a1c9;
+}
+
+.checkout-steps li.completed::after {
+  background-color: #28a745;
+}
+
+.checkout-steps li.active .step-label {
+  color: #00a1c9;
+}
+
+.checkout-steps li.completed .step-label {
+  color: #28a745;
+}
+
 .checkout-steps li:last-child::after {
   display: none;
 }
@@ -52,12 +68,12 @@
 }
 
 .active .step-number, .completed .step-number {
-  background-color: #4299e1;
+  background-color: #00a1c9;
   color: #fff;
 }
 
 .active .step-label, .completed .step-label {
-  color: #4299e1;
+  color: #00a1c9;
 }
 
 .completed .step-number {

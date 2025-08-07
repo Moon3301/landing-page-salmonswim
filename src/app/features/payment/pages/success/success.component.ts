@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-success',
@@ -7,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './success.component.css'
 })
 export class SuccessComponent {
+
+  constructor(private router: Router) {}
+
+  onSubmit(): void {
+    this.router.navigate(['/']);
+  }
 
 }

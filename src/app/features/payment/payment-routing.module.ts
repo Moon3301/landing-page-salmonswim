@@ -10,12 +10,12 @@ const routes: Routes = [
     path: 'checkout', component: CheckoutComponent
   },
   {
-    path: 'confirmation', component: ConfirmationComponent
+    path: 'payment-method', component: ConfirmationComponent
   },
   {
     path: 'success', component: SuccessComponent
   }
-    
+
 ];
 
 @NgModule({

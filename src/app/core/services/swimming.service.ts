@@ -113,19 +113,19 @@ export class SwimmingService {
   ];
 
   private schedules: Schedule[] = [
-    { id: '1', service: 'Rama intermedio y avanzado', dayOfWeek: 'Lunes', time: '18:15 - 19:15', instructor: 'Carlos Mendoza', availableSpots: 1, totalSpots: 1 },
-    { id: '2', service: 'Rama intermedio y avanzado', dayOfWeek: 'Martes', time: '18:15 - 19:15', instructor: 'Carlos Mendoza', availableSpots: 1, totalSpots: 1 },
-    { id: '3', service: 'Rama intermedio y avanzado', dayOfWeek: 'Miércoles', time: '18:15 - 19:15', instructor: 'Carlos Mendoza', availableSpots: 1, totalSpots: 1 },
-    { id: '4', service: 'Rama intermedio y avanzado', dayOfWeek: 'Viernes', time: '17:00 - 18:00', instructor: 'Carlos Mendoza', availableSpots: 1, totalSpots: 1 },
-    { id: '5', service: 'Natación infantil Pre rama', dayOfWeek: 'Miércoles', time: '17:45 - 18:40', instructor: 'María López', availableSpots: 3, totalSpots: 6 },
-    { id: '6', service: 'Natación infantil Pre rama', dayOfWeek: 'Viernes', time: '16:45 - 17:40', instructor: 'María López', availableSpots: 3, totalSpots: 6 },
-    { id: '7', service: 'Clinicas y talleres', dayOfWeek: 'Miércoles', time: '18:15 - 20:00', instructor: 'Ana García', availableSpots: 2, totalSpots: 4 },
-    { id: '8', service: 'Natacion para niños neurodivergentes', dayOfWeek: 'Miércoles', time: '7:45 - 18:40', instructor: 'Roberto Silva', availableSpots: 5, totalSpots: 8 },
-    { id: '9', service: 'Natacion para niños neurodivergentes', dayOfWeek: 'Viernes', time: '16:45 - 17:40', instructor: 'Roberto Silva', availableSpots: 5, totalSpots: 8 },
-    { id: '10', service: 'Natacion master', dayOfWeek: 'Lunes', time: '20:00 - 21:00', instructor: 'María López', availableSpots: 2, totalSpots: 6 },
-    { id: '11', service: 'Natacion master', dayOfWeek: 'Martes', time: '20:00 - 21:00', instructor: 'María López', availableSpots: 2, totalSpots: 6 },
-    { id: '12', service: 'Natacion master', dayOfWeek: 'Miércoles', time: '20:00 - 21:00', instructor: 'María López', availableSpots: 2, totalSpots: 6 },
-    { id: '13', service: 'Natacion adultos', dayOfWeek: 'Lunes', time: '17:00 - 18:00', instructor: 'María López', availableSpots: 2, totalSpots: 6 }
+    { id: '1', service: 'Rama intermedio y avanzado', dayOfWeek: 'Lunes', time: '18:15 - 19:15', instructor: 'Juan Carlos Ramirez', availableSpots: 1, totalSpots: 1 },
+    { id: '2', service: 'Rama intermedio y avanzado', dayOfWeek: 'Martes', time: '18:15 - 19:15', instructor: 'Juan Carlos Ramirez', availableSpots: 1, totalSpots: 1 },
+    { id: '3', service: 'Rama intermedio y avanzado', dayOfWeek: 'Miércoles', time: '18:15 - 19:15', instructor: 'Juan Carlos Ramirez', availableSpots: 1, totalSpots: 1 },
+    { id: '4', service: 'Rama intermedio y avanzado', dayOfWeek: 'Viernes', time: '17:00 - 18:00', instructor: 'Juan Carlos Ramirez', availableSpots: 1, totalSpots: 1 },
+    { id: '5', service: 'Natación infantil Pre rama', dayOfWeek: 'Miércoles', time: '17:45 - 18:40', instructor: 'Carla Carmona', availableSpots: 3, totalSpots: 6 },
+    { id: '6', service: 'Natación infantil Pre rama', dayOfWeek: 'Viernes', time: '16:45 - 17:40', instructor: 'Carla Carmona', availableSpots: 3, totalSpots: 6 },
+    { id: '7', service: 'Clinicas y talleres', dayOfWeek: 'Miércoles', time: '18:15 - 20:00', instructor: 'Carla Carmona', availableSpots: 2, totalSpots: 4 },
+    { id: '8', service: 'Natacion para niños neurodivergentes', dayOfWeek: 'Miércoles', time: '7:45 - 18:40', instructor: 'Carla Carmona', availableSpots: 5, totalSpots: 8 },
+    { id: '9', service: 'Natacion para niños neurodivergentes', dayOfWeek: 'Viernes', time: '16:45 - 17:40', instructor: 'Carla Carmona', availableSpots: 5, totalSpots: 8 },
+    { id: '10', service: 'Natacion master', dayOfWeek: 'Lunes', time: '20:00 - 21:00', instructor: 'Juan Carlos Ramirez', availableSpots: 2, totalSpots: 6 },
+    { id: '11', service: 'Natacion master', dayOfWeek: 'Martes', time: '20:00 - 21:00', instructor: 'Juan Carlos Ramirez', availableSpots: 2, totalSpots: 6 },
+    { id: '12', service: 'Natacion master', dayOfWeek: 'Miércoles', time: '20:00 - 21:00', instructor: 'Juan Carlos Ramirez', availableSpots: 2, totalSpots: 6 },
+    { id: '13', service: 'Natacion adultos', dayOfWeek: 'Lunes', time: '17:00 - 18:00', instructor: 'Juan Carlos Ramirez', availableSpots: 2, totalSpots: 6 }
   ];
 
   private pricingPlans: PricingPlan[] = [

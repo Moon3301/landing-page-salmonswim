@@ -6,15 +6,10 @@
       <!-- Left Column - Payment Form -->
       <div class="checkout-form">
         <h1 class="page-title">Formulario de pago</h1>
-
+        <hr style="margin: 1rem 0;">
         <!-- Contact Information -->
+         
         <payment-contact-info-form (formChange)="onContactFormChange($event)"></payment-contact-info-form>
-
-        <!-- <section class="checkout-section">
-
-        <shared-payment-methods [selectable]="true" (selectionChange)="onPaymentMethodSelected($event)" [showCard]="false"></shared-payment-methods>
-
-        </section> -->
 
         <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">Confirmar</button>
 
@@ -24,7 +19,7 @@
       </div>
 
       <!-- Right Column - Order Summary -->
-      <payment-order-summary (summaryChange)="onSummarySelected($event)"></payment-order-summary>
+      <payment-order-summary></payment-order-summary>
     </div>
   </div>
 </main>
