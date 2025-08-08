@@ -11,7 +11,7 @@
           <shared-payment-methods [selectable]="true" (selectionChange)="onPaymentMethodSelected($event)" [showCard]="false"></shared-payment-methods>
         </section>
 
-        <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">Pagar ahora</button>
+        <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()" [disabled]="true">En desarrollo</button>
 
         <p class="secure-payment">
           <i class="fas fa-lock"></i> Pago seguro con encriptación SSL
